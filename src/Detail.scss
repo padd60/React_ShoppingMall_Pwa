@@ -1,0 +1,58 @@
+// 변수
+$mainColor: #ff0000;
+
+.wow-enter {
+  // 에니메이션 시작때 적용할 css
+  opacity: 0;
+}
+.wow-enter-active {
+  // 에니메이션 동작할때 적용할 css
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.red {
+  color: $mainColor;
+}
+
+// mixin
+@mixin function() {
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+// include
+.my-alert {
+  @include function();
+}
+//extend
+.my-alert-2 {
+  @extend .my-alert;
+  background-color: #ffe591;
+}
+
+.my-alert p {
+  margin-bottom: 0;
+}
+
+// div.container h4 {
+//   color: blue;
+// }
+
+// div.container p {
+//   color: green;
+// }
+
+// nesting
+// div.container {
+//   h4 {
+//     color: blue;
+//   }
+
+//   p {
+//     color: green;
+//   }
+// }
